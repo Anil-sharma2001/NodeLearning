@@ -5,8 +5,8 @@ const fs = require("fs");
 const myserver = http.createServer((req,res)=>{
     const log = `${Date.now()}: New request received`
     fs.appendFile('log.book',log,(err,data)=>{
-        if(req.url == "/about"){
-            res.end ("its a about page")
+        if(req.url == "/"){
+            res.end ("its a home page")
         }
         else if(req.url == "/contact"){
             res.end("its a contact page")
